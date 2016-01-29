@@ -1,43 +1,150 @@
-<div class="jumbotron text-center">
-  <div class="container">
-    <a href="/" class="lang-logo">
-      <img src="<%= asset_path('lang-logo.png') %>">
-    </a>
-    <h1>Getting Started with Ruby on Heroku</h1>
-    <p>This is a sample Ruby application deployed to Heroku. It's a reasonably simple app - but a good foundation for understanding how to get the most out of the Heroku platform.</p>
-    <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-ruby"><span class="glyphicon glyphicon-flash"></span> Getting Started with Ruby</a>
-    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/ruby-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
-  </div>
+<!--Hero-->
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+        <h1 class="text_h center header cd-headline letters type">
+            <span>I Love</span> 
+            <span class="cd-words-wrapper waiting">
+                <b class="is-visible">Ruby on Rails</b>
+                <b>NodeJS</b>
+                <b>developing</b>
+            </span>
+        </h1>
+    </div>
 </div>
-<div class="container">
-  <div class="alert alert-info text-center" role="alert">
-    To deploy your own copy, and learn the fundamentals of the Heroku platform, head over to the <a href="https://devcenter.heroku.com/articles/getting-started-with-ruby" class="alert-link">Getting Started with Ruby on Heroku</a> tutorial.
-  </div>
-  <hr>
-  <div class="row">
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-info-sign"></span> How this sample app works</h3>
-      <ul>
-        <li>This app was deployed to Heroku, either using Git or by using <a href="https://github.com/heroku/ruby-getting-started">Heroku Button</a> on the repository.</li>
 
-        <li>When Heroku received the source code, it grabbed all the dependencies in the <a href="https://github.com/heroku/ruby-getting-started/blob/master/Gemfile">Gemfile</a>.</li>
-        <li>The platform then spins up a dyno, a lightweight container that provides an isolated environment in which the slug can be mounted and executed.</li>
-        <li>You can scale your app, manage it, and deploy over <a href="https://addons.heroku.com/">150 add-on services</a>, from the Dashboard or CLI.</li>
-        <li>Check out the <a href="https://devcenter.heroku.com/articles/getting-started-with-ruby">Getting Started</a> guide to learn more!</li>
-      </ul>
+<!--Intro and service-->
+<div id="intro" class="section scrollspy">
+    <div class="container">
+        <div class="row">
+            <div  class="col s12">
+                <h2 class="center header text_h2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="span_h2"> Phasellus  </span>vestibulum lorem risus, nec suscipit lorem <span class="span_h2"> laoreet quis.</span> </h2>
+            </div>
+
+            <div  class="col s12 m4 l4">
+                <div class="center promo promo-example">
+                    <i class="mdi-image-flash-on"></i>
+                    <h5 class="promo-caption">Speeds up development</h5>
+                    <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="center promo promo-example">
+                    <i class="mdi-social-group"></i>
+                    <h5 class="promo-caption">User Experience Focused</h5>
+                    <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="center promo promo-example">
+                    <i class="mdi-hardware-desktop-windows"></i>
+                    <h5 class="promo-caption">Fully responsive</h5>
+                    <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-link"></span> Helpful Links</h3>
-      <ul>
-        <li><a href="https://www.heroku.com/home">Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/">Heroku Dev Center</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/getting-started-with-ruby">Getting Started with Ruby on Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/deploying-ruby-and-rails">Deploying Ruby Apps on Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/getting-started-with-jruby">Getting Started with Ruby on Heroku (Microsoft Windows)</a></li>
-      </ul>
+</div>
+
+<!--Work-->
+<div class="section scrollspy" id="work">
+    <div class="container">
+        <h2 class="header text_b">Work </h2>
+        <div class="row">
+            <div class="col s12 m4 l4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/project1.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
+                        <p><a href="#">Project link</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
+                        <p>Here is some more information about this project that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/project2.jpeg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
+                        <p><a href="#">Project link</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
+                        <p>Here is some more information about this project that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/project3.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
+                        <p><a href="#">Project link</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
+                        <p>Here is some more information about this project that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/project4.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
+                        <p><a href="#">Project link</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
+                        <p>Here is some more information about this project that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/project5.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
+                        <p><a href="#">Project link</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
+                        <p>Here is some more information about this project that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/project6.jpeg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
+                        <p><a href="#">Project link</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
+                        <p>Here is some more information about this project that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div> <!-- row -->
-   <div class="alert alert-info text-center" role="alert">
-    Please do work through the Getting Started guide, even if you do know how to build such an application.  The guide covers the basics of working with Heroku, and will familiarize you with all the concepts you need in order to build and deploy your own apps.
-  </div>
+</div>
+
+<!--Parallax-->
+<div class="parallax-container">
+    <div class="parallax"><img src="img/parallax1.png"></div>
 </div>

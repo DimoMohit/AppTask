@@ -1,49 +1,121 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GettingStarted</title>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag  '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' %>
+  <title>Blog</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag  '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav class="navbar navbar-default navbar-static-top navbar-inverse">
-  <div class="container">
-    <ul class="nav navbar-nav">
-      <li class="active">
-        <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
-      </li>
-      <li>
-        <a href="https://devcenter.heroku.com/articles/how-heroku-works"><span class="glyphicon glyphicon-user"></span> How Heroku Works</a>
-      </li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-info-sign"></span> Getting Started Guides <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-ruby">Getting Started with Ruby on Heroku</a></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started with Node on Heroku</a></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-php">Getting Started with PHP on Heroku</a></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-python">Getting Started with Python on Heroku</a></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-java">Getting Started with Java on Heroku</a></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-go">Getting Started with Go on Heroku</a></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-clojure">Getting Started with Clojure on Heroku</a></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-scala">Getting Started with Scala on Heroku</a></li>
-            <li class="divider"></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-heroku-and-connect-without-local-dev">Getting Started on Heroku with Heroku Connect</a></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-jruby">Getting Started with Ruby on Heroku (Microsoft Windows)</a></li>
-          </ul>
-      </li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li class="navbar-right">
-        <a href="https://devcenter.heroku.com"><span class="glyphicon glyphicon-book"></span> Heroku Dev Center</a>
-      </li>
-    </ul>
+  <!-- Pre Loader -->
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+  <!--Navigation-->
+  <div class="navbar-fixed">
+      <nav id="nav_f" class="default_color" role="navigation">
+          <div class="container">
+            <div class="nav-wrapper">
+              <%= link_to "/",class: "brand-logo",id: "logo-container" do %>
+                <%= image_tag "logo.png",width: "200" %>
+              <% end %>
+              <ul class="right hide-on-med-and-down">
+                  <li>
+                    <%= link_to "Service","/#intro",class: "links" %>
+                  </li>
+                  <li>
+                    <%= link_to "Work","/#work",class: "links" %>
+                  <li>
+                    <%= link_to "Blog","/posts",class: "links" %>
+                  </li>
+                  <li>
+                    <%= link_to "Contact","/#contact",class: "links" %>
+                  <li>
+                    <%= link_to "Github","https://github.com/DimoMohit",class: "links" %>
+                  </li>
+              </ul>
+              <ul id="nav-mobile" class="side-nav">
+                <li>
+                  <%= link_to "Service","/#intro",class: "links" %>
+                </li>
+                <li>
+                  <%= link_to "Work","/#work",class: "links" %>
+                <li>
+                  <%= link_to "Blog","/posts",class: "links" %>
+                </li>
+                <li>
+                  <%= link_to "Contact","/#contact",class: "links" %>
+                <li>
+                  <%= link_to "Github","https://github.com/DimoMohit",class: "links" %>
+                </li>
+              </ul>
+              <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+            </div>
+          </div>
+      </nav>
   </div>
-</nav>
 
-<%= yield %>
+  <div class="loader-section section-left"></div>
+  <div class="loader-section section-right"></div>
+ 
+  </div>
 
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <%= yield %>
+  <!--Footer-->
+  <footer id="contact" class="page-footer default_color scrollspy">
+      <div class="container">  
+          <div class="row">
+              <div class="col l6 s12">
+                  <form class="col s12" action="contact.php" method="post">
+                      <div class="row">
+                          <div class="input-field col s6">
+                              <i class="mdi-action-account-circle prefix white-text"></i>
+                              <input id="icon_prefix" name="name" type="text" class="validate white-text">
+                              <label for="icon_prefix" class="white-text">First Name</label>
+                          </div>
+                          <div class="input-field col s6">
+                              <i class="mdi-communication-email prefix white-text"></i>
+                              <input id="icon_email" name="email" type="email" class="validate white-text">
+                              <label for="icon_email" class="white-text">Email-id</label>
+                          </div>
+                          <div class="input-field col s12">
+                              <i class="mdi-editor-mode-edit prefix white-text"></i>
+                              <textarea id="icon_prefix2" name="message" class="materialize-textarea white-text"></textarea>
+                              <label for="icon_prefix2" class="white-text">Message</label>
+                          </div>
+                          <div class="col offset-s7 s5">
+                              <button class="btn waves-effect waves-light red darken-1" type="submit">Submit
+                                  <i class="mdi-content-send right white-text"></i>
+                              </button>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+              
+              <div class="col l2 s12 right">
+                  <h5 class="white-text">Social</h5>
+                  <ul>
+                      
+                      <li>
+                          <a class="white-text" href="https://www.facebook.com/mohit.dutta3">
+                              <i class="small fa fa-facebook-square white-text"></i> Facebook
+                          </a>
+                      </li>
+                      <li>
+                          <a class="white-text" href="https://github.com/DimoMohit">
+                              <i class="small fa fa-github-square white-text"></i> Github
+                          </a>
+                      </li>
+                      <li>
+                          <a class="white-text" href="https://in.linkedin.com/pub/mohit-kumar/59/6b1/ab0">
+                              <i class="small fa fa-linkedin-square white-text"></i> Linkedin
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </footer>
 </body>
 </html>
