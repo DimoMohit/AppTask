@@ -6,7 +6,7 @@ Rails.application.initialize!
 if Rails.env == "production"
   ActionMailer::Base.smtp_settings = {
     :user_name => 'dimomohit@gmail.com',
-    :password => 'GANGAnilamDUTTA23',
+    :password => 'GITAnilamDUTTA23!',
     :domain => 'dimomohit.com',
     :address => 'smtp.gmail.com',
     :port => 587,
