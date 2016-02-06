@@ -14,6 +14,6 @@ class MessagesController < ApplicationController
 
   private
   def subscription_params
-    params.require(:message).permit(:name,:email,:message)
+    params.require(:message).permit(:name,:email,:msg)
   end
 end
