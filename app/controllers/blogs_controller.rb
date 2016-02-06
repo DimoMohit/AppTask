@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
-  before_action :authenticate_user! ,only: [:create,:new,:update,:edit]
+  before_action :authenticate_user! ,only: [:create,:new,:update,
+    :edit,:destroy]
   def index
     if params[:offset]
       @blogs=Blog.offset(params[:offset]).first(10)
@@ -39,6 +40,10 @@ class BlogsController < ApplicationController
   def edit
     @blog=current_user.blogs.find(params[:id])
     render "new"
+  end
+  def destroy
+    current_user.blogs.find(params[:id]).destroy
+    redirect_to blogs_url
   end
   private
   def blog_params
