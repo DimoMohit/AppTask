@@ -15,7 +15,7 @@
       <nav id="nav_f" class="default_color" role="navigation">
           <div class="container">
             <div class="nav-wrapper">
-              <%= link_to "/",class: "brand-logo",id: "logo-container" do %>
+              <%= link_to "/",class: "brand-logo #{is_current_page(root_url)}",id: "logo-container" do %>
                 <%= image_tag "logo.png",width: "200" %>
               <% end %>
               <ul class="right hide-on-med-and-down">
@@ -25,7 +25,7 @@
                   <li>
                     <%= link_to "Work","/#work",class: "links" %>
                   <li>
-                    <%= link_to "Blog","/posts",class: "links" %>
+                    <%= link_to "Blog",blogs_path,class: "links #{is_current_page(blogs_url)}" %>
                   </li>
                   <li>
                     <%= link_to "Contact","/#contact",class: "links" %>
