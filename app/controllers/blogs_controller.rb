@@ -9,7 +9,7 @@ class BlogsController < ApplicationController
     end
   end
   def show
-    @blogs=Blog.find(params[:id])
+    @blog=Blog.find(params[:id])
     render :index
   end
   def create

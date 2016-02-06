@@ -10,3 +10,15 @@
           =sanitize blog.blog_content
         .m-t-10
         .clear-both-hr
+  -if @blog
+    -blog=@blog
+    .row
+      .col-xs-12
+        .m-t-10
+          =sanitize blog.header
+        .m-t-10
+          =sanitize blog.sub_header
+        .m-t-10
+          =sanitize blog.blog_content
+        .m-t-10
+        .clear-both-hr
