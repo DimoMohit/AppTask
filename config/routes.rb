@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   devise_for :users
   mount RailsAdmin::Engine => '/observer', as: 'rails_admin'
   resources :widgets
@@ -9,6 +10,10 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
 
   root 'welcome#index'
+  resources :blogs
+  resources :subscription
+  resources :contents
+  resources :messages
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

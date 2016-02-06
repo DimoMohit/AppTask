@@ -37,9 +37,21 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
+    aws-sdk (1.66.0)
+      aws-sdk-v1 (= 1.66.0)
+    aws-sdk-v1 (1.66.0)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4)
     bcrypt (3.1.10)
     builder (3.2.2)
     cancancan (1.12.0)
+    ckeditor (4.1.6)
+      cocaine
+      orm_adapter (~> 0.5.0)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.8)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -48,6 +60,9 @@ GEM
       execjs
     coffee-script-source (1.8.0)
     concurrent-ruby (1.0.0)
+    date_validator (0.9.0)
+      activemodel
+      activesupport
     devise (3.5.4)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -56,6 +71,8 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     erubis (2.7.0)
+    exceptional (2.0.33)
+      rack
     execjs (2.2.2)
     font-awesome-rails (4.4.0.0)
       railties (>= 3.2, < 5.0)
@@ -81,6 +98,7 @@ GEM
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.99)
+    mimemagic (0.3.0)
     mini_portile2 (2.0.0)
     minitest (5.8.3)
     multi_json (1.11.2)
@@ -92,6 +110,12 @@ GEM
       activerecord (>= 3.0, < 6.0)
       activesupport (>= 3.0, < 6.0)
       request_store (~> 1.1)
+    paperclip (4.3.2)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      cocaine (~> 0.5.5)
+      mime-types
+      mimemagic (= 0.3.0)
     pg (0.17.1)
     puma (2.9.1)
       rack (>= 1.1, < 2.0)
@@ -187,12 +211,17 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-sdk (~> 1.6)
   cancancan
+  ckeditor
   coffee-rails (~> 4.0.0)
+  date_validator
   devise
+  exceptional (~> 2.0.27)
   jbuilder (~> 2.0)
   jquery-rails
   paper_trail
+  paperclip (~> 4)
   pg
   puma
   rails (= 4.2.3)

@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
         :recoverable, :rememberable, :trackable, :validatable,
         :confirmable, :lockable, :timeoutable
   has_paper_trail
+  has_many :blogs
+  has_many :blogs,as: :favorites_of
   after_create :create_admin
   def create_admin
     if User.count <2
