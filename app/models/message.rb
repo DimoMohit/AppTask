@@ -7,6 +7,7 @@ class Message < ActiveRecord::Base
   after_create :verify_email
 
   def verify_email
-  	NotificationMailer.message(self)
+  	data={name: self.name,email: self.email}
+  	NotificationMailer.send_message(data).deliver_now!
   end
 end

@@ -1,11 +1,16 @@
 class NotificationMailer < ApplicationMailer
   def subscribe(subscription)
     @subscription=subscription
+    @root_url=root_url
+    mail(:to => "#{subscription.email}",
+      :bcc => "mohit@99tests.com", 
+      :subject => "Thank you for subscribing.")
   end
 
-  def message(message)
+  def send_message(message)
     @message=message
-    mail(:to => "#{message.email}",
+    @root_url=root_url
+    mail(:to => "#{message['email']}",
       :bcc => "mohit@99tests.com", 
       :subject => "Thank you for contacting me.")
   end
