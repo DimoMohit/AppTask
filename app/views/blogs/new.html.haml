@@ -3,17 +3,17 @@
   %h5.m-t-10
     Header
   .m-t-10
-  = form.cktext_area :header, :class => 'someclass',:value => 'Header', :ckeditor => {:uiColor => '#FFFFFF',:language => 'uk', :toolbar => 'mini'}
+  = form.cktext_area :header, :class => 'someclass',:value => 'Header', :ckeditor => {:uiColor => '#FFFFFF',:language => 'uk'}
   .m-t-40
   %h5.m-t-10
     Sub header
   .m-t-10
-  = form.cktext_area :sub_header, :value => 'Sub header', :id => 'sometext'  , :ckeditor => {:uiColor => '#FFFFFF',:language => 'uk', :toolbar => 'mini'}
+  = form.cktext_area :sub_header, :value => 'Sub header', :id => 'sometext'  , :ckeditor => {:uiColor => '#FFFFFF',:language => 'uk'}
   .m-t-40
   %h5.m-t-10
     Content
   .m-t-10
-  = form.cktext_area :blog_content,:value => 'Blog content', :cols => 40, :ckeditor => {:uiColor => '#FFFFFF', :toolbar => 'mini'}
+  = form.cktext_area :blog_content,:value => 'Blog content', :cols => 40, :ckeditor => {:uiColor => '#FFFFFF'}
   .m-t-10
   .field
     = form.check_box :publish
