@@ -2,4 +2,7 @@
 class NotificationMailerPreview < ActionMailer::Preview
 	def subscription
 	end
+
+	def message
+	end
 end
