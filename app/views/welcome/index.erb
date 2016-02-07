@@ -58,7 +58,7 @@
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="img/project1.jpg">
+                       
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
@@ -73,7 +73,7 @@
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="img/project2.jpeg">
+                       
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
@@ -88,7 +88,7 @@
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="img/project3.png">
+                       
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
@@ -103,7 +103,7 @@
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="img/project4.jpg">
+                       
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
@@ -118,7 +118,7 @@
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="img/project5.png">
+                       
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
@@ -133,7 +133,7 @@
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="img/project6.jpeg">
+                       
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
@@ -151,5 +151,31 @@
 
 <!--Parallax-->
 <div class="parallax-container">
-    <div class="parallax"><img src="img/parallax1.png"></div>
+    <div class="container">
+        <h2 class="header text_b">
+            <%= link_to blogs_path do %>
+                Latest Blogs 
+            <% end %>
+        </h2>
+        <div class="row">
+            <% @blogs.each do |blog| %>
+                <div class="col s12 m4 l4">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                           
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4"><%= sanitize blog.header %><i class="mdi-navigation-more-vert right"></i></span>
+                            <p><%= link_to 'Blog link', blog_path(blog) %></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4"><%= sanitize blog.header %> <i class="mdi-navigation-close right"></i></span><p>
+                            This blog is related to 
+                            <%= sanitize blog.sub_header %></p>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
 </div>
