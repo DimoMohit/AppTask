@@ -3,9 +3,9 @@ class BlogsController < ApplicationController
     :edit,:destroy]
   def index
     if params[:offset]
-      @blogs=Blog.offset(params[:offset]).first(10)
+      @blogs=Blog.where(publish: true).offset(params[:offset]).first(10)
     else
-      @blogs=Blog.last(10)
+      @blogs=Blog.where(publish: true).last(10)
     end
   end
   def show
