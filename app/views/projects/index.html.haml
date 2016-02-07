@@ -1,0 +1,27 @@
+.container
+  -if @projects
+    -@projects.each do |project|
+      .row
+        .col-xs-12
+          .m-t-10
+            =link_to project_url(project) do
+              =sanitize project.name
+          .m-t-10
+            =sanitize project.sub_header
+          .m-t-10
+            =sanitize project.description
+          .m-t-10
+          .clear-both-hr
+  -if @project
+    -project=@project
+    .row
+      .col-xs-12
+        .m-t-10
+          =link_to project_url(project) do
+            =sanitize project.header
+        .m-t-10
+          =sanitize project.sub_header
+        .m-t-10
+          =sanitize project.project_content
+        .m-t-10
+        .clear-both-hr

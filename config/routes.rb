@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :subscription
   resources :contents
   resources :messages
+  resources :projects
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,0 +1,24 @@
+= javascript_include_tag Ckeditor.cdn_url
+= form_for @project||Project.new,html: {class: "full"} do |form|
+  %h5.m-t-10
+    Header
+  .m-t-10
+  = form.cktext_area :name, :class => 'someclass',:value => 'Header', :ckeditor => {:uiColor => '#FFFFFF'}
+  .m-t-40
+  %h5.m-t-10
+  .m-t-10.input-field
+    =form.label :url
+    = form.url_field :url
+  .m-t-40
+  %h5.m-t-10
+    Sub header
+  .m-t-10
+  = form.cktext_area :sub_header, :value => 'Sub header', :id => 'sometext'  , :ckeditor => {:uiColor => '#FFFFFF'}
+  .m-t-40
+  %h5.m-t-10
+    Description
+  .m-t-10
+  = form.cktext_area :description,:value => 'Blog content', :cols => 40, :ckeditor => {:uiColor => '#FFFFFF'}
+  
+  .m-t-10
+  = form.submit :save,class: "btn waves-effect waves-light blue darken-1"

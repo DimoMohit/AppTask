@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   has_paper_trail
   has_many :blogs
   has_many :blogs,as: :favorites_of
+  has_many :projects
   after_create :create_admin
   def create_admin
     if User.count <2
