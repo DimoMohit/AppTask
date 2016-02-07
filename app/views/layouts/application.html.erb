@@ -3,7 +3,6 @@
 <head>
   <title><%= (content_for?(:title) ? yield(:title) : "dimoMohit") %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta content="width=device-width, initial-scale=1" name ="viewport" />
   <%= csrf_meta_tags %>
@@ -63,6 +62,7 @@
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= yield %>
   <!--Footer-->
   <footer id="contact" class="page-footer default_color scrollspy">
