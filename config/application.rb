@@ -12,7 +12,9 @@ module RubyGettingStarted
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     config.autoload_paths << "#{config.root}/lib"
-    config.action_view.sanitized_allowed_tags = ['strong', 'em', 'a','p','i','s','u','sub','sup','br']
+    config.action_view.sanitized_allowed_tags = ['h1','h2','h3','h4','h5','h6',
+        'strong', 'em', 'a','p','i','img','b',
+        's','u','sub','sup','br']
     config.action_view.sanitized_allowed_attributes = ['href', 'title']
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
