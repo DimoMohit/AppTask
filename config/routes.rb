@@ -67,4 +67,18 @@ Rails.application.routes.draw do
       end
     end
   end
+  ###API subdomain
+  constraints subdomain: 'product' do
+    namespace :product,path: '/' do
+      # Directs /admin/products/* to Admin::ProductsController
+      # (app/controllers/admin/products_controller.rb)
+      resources :work_trackers,path: "work-tracker" do
+        resources :works,path: "works" do
+        end
+      end
+    end
+  end
+  constraints subdomain: 'blogs' do
+    resources :blogs,path: "/" 
+  end
 end
