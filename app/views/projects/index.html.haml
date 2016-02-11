@@ -2,7 +2,7 @@
   -if @projects
     -@projects.each do |project|
       .row
-        .col-xs-12
+        .s12
           .m-t-10
             =link_to project_url(project) do
               =sanitize project.name
@@ -15,7 +15,7 @@
   -if @project
     -project=@project
     .row
-      .col-xs-12
+      .s12
         .m-t-10
           =link_to project_url(project) do
             =sanitize project.header

@@ -1,6 +1,6 @@
 <div class="container">
   <h2>Forgot your password?</h2>
-
+  <div class="boxed">
   <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
     <%= devise_error_messages! %>
 
@@ -10,9 +10,9 @@
     </div>
 
     <div class="actions">
-      <%= f.submit "Send me reset password instructions" %>
+      <%= f.submit "Send me reset password instructions",class: "btn waves-effect waves-light green darken-1" %>
     </div>
   <% end %>
-
+  </div>
   <%= render "users/shared/links" %>
 </div>

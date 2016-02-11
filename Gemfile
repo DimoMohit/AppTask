@@ -14,7 +14,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
+gem 'twitter-bootstrap-rails'
 gem 'rails_admin'
+# gem 'rails_admin_example_theme', :git => 'git://github.com/bbenezech/rails_admin_example_theme.git'
 gem 'devise'
 gem 'cancancan'
 gem 'paper_trail'

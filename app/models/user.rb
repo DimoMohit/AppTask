@@ -8,6 +8,9 @@ class User < ActiveRecord::Base
   has_many :blogs
   has_many :blogs,as: :favorites_of
   has_many :projects
+  has_many :groups,class_name: "Product::WorkTracker::Group"
+  has_many :works,class_name: "Product::WorkTracker::Work"
+  has_many :votes,class_name: "Product::WorkTracker::Vote"
   after_create :create_admin
   def create_admin
     if User.count <2

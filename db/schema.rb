@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160207065436) do
+ActiveRecord::Schema.define(version: 20160211174004) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,6 +69,49 @@ ActiveRecord::Schema.define(version: 20160207065436) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "product_work_tracker_groups", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "subdomain"
+    t.integer  "user_id"
+    t.string   "settings"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "product_work_tracker_progresses", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "work_id"
+    t.integer  "current_state"
+    t.integer  "final_state"
+    t.integer  "current_worker"
+    t.string   "workers_sequence"
+    t.integer  "weight"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "product_work_tracker_votes", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "work_id"
+    t.float    "vote_point"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "product_work_tracker_works", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "owner_id"
+    t.string   "owner_type"
+    t.string   "name"
+    t.float    "weight"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "group_id"
+  end
+
+  add_index "product_work_tracker_works", ["group_id"], name: "index_product_work_tracker_works_on_group_id", using: :btree
+
   create_table "projects", force: :cascade do |t|
     t.string   "name"
     t.string   "sub_header"
@@ -114,6 +157,9 @@ ActiveRecord::Schema.define(version: 20160207065436) do
     t.datetime "locked_at"
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
+    t.string   "role"
+    t.float    "weight"
+    t.integer  "rank"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree

@@ -1,6 +1,6 @@
 <div class="container">
   <h2>Log in</h2>
-
+  <div class="boxed">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
       <%= f.label :email %><br />
@@ -20,9 +20,9 @@
     <% end -%>
 
     <div class="actions">
-      <%= f.submit "Log in" %>
+      <%= f.submit "Log in",class: "btn waves-effect waves-light blue darken-1" %>
     </div>
   <% end %>
-
+  </div>
   <%= render "users/shared/links" %>
 </div>

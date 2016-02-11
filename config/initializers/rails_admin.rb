@@ -15,7 +15,9 @@ RailsAdmin.config do |config|
   config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
 
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
-
+  config.main_app_name = ["dimoMohit", "Products"]
+  # or something more dynamic
+  # config.main_app_name = Proc.new { |controller| [ "Cool app", "BackOffice - #{controller.params[:action].try(:titleize)}" ] }
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory

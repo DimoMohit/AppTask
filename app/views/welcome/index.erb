@@ -75,9 +75,31 @@
         </div>
     </div>
 </div>
-
+<!--Work-->
+<div class="section scrollspy" id="product">
+    <div class="container">
+        <h2 class="header text_b">Products </h2>
+        <div class="row">
+            <div class="col s12 m4 l4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                       
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4"><%= link_to "Work tracker",product_work_trackers_path %> <i class="mdi-navigation-more-vert right"></i></span>
+                        <p><%= link_to 'View',product_work_trackers_path %></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4"><%= "Work tracker" %> <i class="mdi-navigation-close right"></i></span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!--Parallax-->
-<div class="parallax-container">
+<div class="parallax-container" id="team">
     <div class="container">
         <h2 class="header text_b">
             <%= link_to blogs_path do %>
