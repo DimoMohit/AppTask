@@ -102,6 +102,7 @@
       <p class="alert alert alert-error"><%= alert %></p>
     <%end %>
   </div>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= yield %>
   <!--Footer-->
   <footer id="contact" class="page-footer default_color scrollspy">
@@ -158,6 +159,5 @@
           </div>
       </div>
   </footer>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>
