@@ -78,6 +78,8 @@ GEM
     execjs (2.2.2)
     font-awesome-rails (4.4.0.0)
       railties (>= 3.2, < 5.0)
+    font_assets (0.1.12)
+      rack
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     haml (4.0.7)
@@ -238,6 +240,7 @@ DEPENDENCIES
   date_validator
   devise
   exceptional (~> 2.0.27)
+  font_assets
   jbuilder (~> 2.0)
   jquery-rails
   paper_trail

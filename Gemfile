@@ -43,6 +43,7 @@ gem 'spring',        group: :development
 
 gem 'puma'
 gem 'dalli'
+gem 'font_assets'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
