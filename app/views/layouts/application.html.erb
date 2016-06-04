@@ -8,7 +8,7 @@
   <meta name="Description" CONTENT="Author: Mohit, Illustrator: Developer, Category: Web developer | Blogs on Ruby on Rails | Ruby on Rails | Ruby |Rubygem">
   <meta name="google-site-verification" content="L27h8fqLyez2syG85disUmfEZdLOXOZKCiQHhtFMwYM" />
   <%= csrf_meta_tags %>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true,cache: true %>
 </head>
 <body>
   <!-- Pre Loader -->
@@ -102,7 +102,7 @@
       <p class="alert alert alert-error"><%= alert %></p>
     <%end %>
   </div>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true,cache: true %>
   <%= yield %>
   <!--Footer-->
   <footer id="contact" class="page-footer default_color scrollspy">
