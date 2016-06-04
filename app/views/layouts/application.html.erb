@@ -9,6 +9,7 @@
   <meta name="Description" CONTENT="Author: Mohit, Illustrator: Developer, Category: Web developer | Blogs on Ruby on Rails | Ruby on Rails | Ruby |Rubygem">
   <meta name="google-site-verification" content="L27h8fqLyez2syG85disUmfEZdLOXOZKCiQHhtFMwYM" />
   <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    'application', media: 'all',type: 'text/css', 'data-turbolinks-track' => true,cache: true %>
 </head>
 <body>
   <!-- Pre Loader -->
@@ -160,21 +161,5 @@
           </div>
       </div>
   </footer>
-<noscript id="deferred-styles">
-  <%= stylesheet_link_tag    'application', media: 'all',type: 'text/css', 'data-turbolinks-track' => true,cache: true %>
-</noscript>
-<script>
-  var loadDeferredStyles = function() {
-    var addStylesNode = document.getElementById("deferred-styles");
-    var replacement = document.createElement("div");
-    replacement.innerHTML = addStylesNode.textContent;
-    document.body.appendChild(replacement)
-    addStylesNode.parentElement.removeChild(addStylesNode);
-  };
-  var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-      webkitRequestAnimationFrame || msRequestAnimationFrame;
-  if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
-  else window.addEventListener('load', loadDeferredStyles);
-</script>
 </body>
 </html>
