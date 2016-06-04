@@ -11,7 +11,7 @@
  * file per style scope.
  *
  * require_tree .
- *= require_tree ./material
+ *= require material/custom-min
  *= require style 
  *= require_self
  */
