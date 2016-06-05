@@ -15,7 +15,7 @@ class RobotsTxt
       # User-Agent: *
       # Disallow: /openbugs/
       # Disallow: /opentags/
-      response.write "User-agent: *\nDisallow: /opentags/\nDisallow: /openbugs/"
+      response.write "User-agent: *\nDisallow: /observer/\nDisallow: /observers/"
     else
       response.write "User-agent: *\nDisallow: /"
     end
