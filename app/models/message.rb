@@ -9,6 +9,6 @@ class Message < ActiveRecord::Base
   def verify_email
   	data={name: self.name,email: self.email}
   	NotificationMailer.send_message(data).deliver_now!
-  rescue
+  # rescue
   end
 end

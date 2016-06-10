@@ -5,8 +5,7 @@ class MessagesController < ApplicationController
       flash[:notice]="Unable to send message because #{subscription.error_message}"
       redirect_to :back
       return
-    end
-    if subscription.save
+    elsif subscription.save
       flash[:notice]="Message was successfully sent. Please check your email for the reply."
       redirect_to :back
     end
