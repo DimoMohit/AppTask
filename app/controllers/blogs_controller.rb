@@ -9,7 +9,7 @@ class BlogsController < ApplicationController
     end
   end
   def show
-    @blog=Blog.find(params[:id])
+    @blog=Blog.find_by_header(params[:id])||Blog.find(params[:id])
     render :index
   end
   def create

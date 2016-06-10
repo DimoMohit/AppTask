@@ -45,6 +45,7 @@ gem 'puma'
 gem 'dalli'
 gem 'font_assets'
 gem 'sitemap_generator'
+gem "dynamic_sitemaps"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
