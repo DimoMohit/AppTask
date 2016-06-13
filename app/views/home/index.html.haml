@@ -38,19 +38,19 @@
   .inner.narrow
     %header
       %h2 Get in touch
-    %form.grid-form{:action => "#", :method => "post"}
+    =form_tag contact_path ,html: {class: 'grid-form'} do |f|
       .form-control.narrow
         %label{:for => "name"} Name
-        %input#name{:name => "name", :type => "text"}
+        =text_field_tag :name,'',id: :name
       .form-control.narrow
         %label{:for => "email"} Email
-        %input#email{:name => "email", :type => "email"}
+        =email_field_tag :email,'',id: :email
       .form-control
         %label{:for => "message"} Message
-        %textarea#message{:name => "message", :rows => "4"}
+        =text_area_tag :message,'',id: :message
       %ul.actions
         %li
-          %input{:type => "submit", :value => "Send Message"}/
+          =submit_tag 'Send Message'
 
 %footer#footer
   .copyright

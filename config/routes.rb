@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'home#index'
+  post 'contact' => 'home#contact'
   resources :tasks do
     member{
       get :assign
