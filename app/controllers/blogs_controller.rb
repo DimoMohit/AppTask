@@ -49,6 +49,6 @@ class BlogsController < ApplicationController
   private
   def blog_params
       params.require(:blog).permit(:header,:sub_header,
-        :blog_content,:publish)
+        :blog_content,:publish,:url,:meta)
   end
 end

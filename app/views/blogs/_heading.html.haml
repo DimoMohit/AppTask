@@ -7,3 +7,5 @@
         =link_to "Create Blog",new_blog_path,class: 'btn btn-primary'
         -if @blog
           =link_to "Edit this Blog",edit_blog_path(@blog),class: 'btn btn-primary'
+-if @blog && @blog.meta
+  -@meta=@blog.meta
