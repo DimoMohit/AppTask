@@ -20,7 +20,7 @@
   <!--Navigation-->
   <div class="navbar-fixed">
       <nav id="nav_f" class="default_color" role="navigation">
-          <div class="c-container">
+          <div class="container">
             <div class="nav-wrapper">
               <%= link_to "/",class: "brand-logo #{is_current_page(root_url)}",id: "logo-container" do %>
                 <%= image_tag "logo.png",width: "200" %>
@@ -108,7 +108,7 @@
   <%= yield %>
   <!--Footer-->
   <footer id="contact" class="page-footer default_color scrollspy">
-      <div class="c-container">  
+      <div class="container">  
           <div class="row">
               <div class="col l6 s12">
                   <%= form_for Message.new,class: "col s12" do |f| %>
