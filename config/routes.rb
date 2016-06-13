@@ -1,20 +1,9 @@
 Rails.application.routes.draw do
-  mount Ckeditor::Engine => '/ckeditor'
-  devise_for :users
-  mount RailsAdmin::Engine => '/observer', as: 'rails_admin'
-  resources :widgets
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  get '/robots.txt' => RobotsTxt
-  root 'welcome#index'
-  resources :blogs
-  resources :subscription
-  resources :contents
-  resources :messages
-  resources :projects
+  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -59,26 +48,9 @@ Rails.application.routes.draw do
   #   resources :photos, concerns: :toggleable
 
   # Example resource route within a namespace:
-  namespace :product do
-    # Directs /admin/products/* to Admin::ProductsController
-    # (app/controllers/admin/products_controller.rb)
-    resources :work_trackers,path: "work-tracker" do
-      resources :works,path: "works" do
-      end
-    end
-  end
-  ###API subdomain
-  constraints subdomain: 'product' do
-    namespace :product,path: '/' do
-      # Directs /admin/products/* to Admin::ProductsController
-      # (app/controllers/admin/products_controller.rb)
-      resources :work_trackers,path: "work-tracker" do
-        resources :works,path: "works" do
-        end
-      end
-    end
-  end
-  constraints subdomain: 'blogs' do
-    resources :blogs,path: "/" 
-  end
+  #   namespace :admin do
+  #     # Directs /admin/products/* to Admin::ProductsController
+  #     # (app/controllers/admin/products_controller.rb)
+  #     resources :products
+  #   end
 end

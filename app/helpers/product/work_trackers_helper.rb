@@ -1,2 +1,0 @@
-module Product::WorkTrackersHelper
-end

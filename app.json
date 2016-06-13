@@ -2,7 +2,7 @@
   "name": "Heroku Rails sample app",
   "description": "A barebones Rails app, which can easily be deployed to Heroku",
   "image": "heroku/ruby",
-  "repository": "https://github.com/heroku/ruby-getting-started",
+  "repository": "https://git.heroku.com/user-task.git",
   "keywords": ["ruby", "rails" ],
   "addons": [ "heroku-postgresql" ]
 }
