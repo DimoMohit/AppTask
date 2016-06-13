@@ -28,6 +28,7 @@
         -if current_user && current_user.is_admin
           %li
             =link_to 'Observer',rails_admin.dashboard_path
+        -elsif current_user
           %li
             =link_to 'UserTask Mapping',root_path
         -else
