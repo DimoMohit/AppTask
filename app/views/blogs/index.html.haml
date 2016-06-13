@@ -1,10 +1,13 @@
+=render 'heading',inline: true
 .container
   -if @blogs
     -@blogs.each do |blog|
       .row
         .s12
-          .m-t-10
-            =sanitize blog.header
+          =link_to blog_path(blog.url||blog.id) do
+            %h5.m-t-10
+              %strong
+                =sanitize blog.header
           .m-t-10
             =sanitize blog.sub_header
           .m-t-10
@@ -15,8 +18,10 @@
     -blog=@blog
     .row
       .s12
-        .m-t-10
-          =sanitize blog.header
+        =link_to blog_path(blog.url||blog.id) do
+          %h5.m-t-10
+            %strong
+              =sanitize blog.header
         .m-t-10
           =sanitize blog.sub_header
         .m-t-10

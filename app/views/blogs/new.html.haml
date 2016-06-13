@@ -1,5 +1,13 @@
 = javascript_include_tag Ckeditor.cdn_url
+= render 'heading',inline: true
 = form_for @blog||Blog.new,html: {class: "full"} do |form|
+  .m-t-10
+  .field
+    = form.check_box :publish
+  %h5.m-t-10
+    URL
+  .m-t-10
+  =form.text_field :url,class: "form-control"
   %h5.m-t-10
     Header
   .m-t-10
@@ -14,8 +22,5 @@
     Content
   .m-t-10
   = form.cktext_area :blog_content, :cols => 40, :ckeditor => {:uiColor => '#FFFFFF'}
-  .m-t-10
-  .field
-    = form.check_box :publish
   .m-t-10
   = form.submit :save,class: "btn waves-effect waves-light blue darken-1"

@@ -14,6 +14,7 @@ class BlogsController < ApplicationController
   end
   def create
     blog=current_user.blogs.build(blog_params)
+    blog.user=current_user
     if blog.invalid?
       flash[:notice]="Unable to post because #{blog.error_message}"
       redirect_to :back
