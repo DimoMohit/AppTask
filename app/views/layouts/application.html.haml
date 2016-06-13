@@ -36,6 +36,8 @@
             =link_to 'Sign Up',new_user_registration_path
           %li
             =link_to 'Login',new_user_session_path
+        %li
+          =link_to 'Contact Us','/#contact-us'
     - flash.each do |name, msg|
       -flash_name = (name!='error' ? name : 'danger')
       = content_tag :div, msg, :id => "flash_#{flash_name}",class: "alert alert-dismissible alert-#{flash_name} m-t-50"
