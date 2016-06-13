@@ -46,6 +46,11 @@ gem 'dalli'
 gem 'font_assets'
 gem 'sitemap_generator'
 gem "dynamic_sitemaps"
+group :test, :development do
+  gem 'cucumber-rails', :require => false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
+end
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
