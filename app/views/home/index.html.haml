@@ -1,0 +1,60 @@
+/ Banner
+%section#banner
+  %h2
+    %strong User Task
+    is a user task mapping according to Greedy Algo
+  %p Brought to you by DimoMohit
+  %ul.actions
+    %li
+      =link_to 'Get started',new_user_session_path,class: 'button special'
+/ One
+%section#one.wrapper.special
+  .inner
+    %header.major
+      %h2 Lorem ipsum feugiat tempus
+    .features
+      .feature
+        %i.fa.fa-diamond
+        %h3 Etiam consequat
+        %p Sed tempus feugiat adipiscing nisl cursus aliquam dolore.
+      .feature
+        %i.fa.fa-copy
+        %h3 Sed adipiscing
+        %p Sed tempus feugiat adipiscing nisl cursus aliquam dolore.
+      .feature
+        %i.fa.fa-paper-plane-o
+        %h3 Feugiat nullam
+        %p Sed tempus feugiat adipiscing nisl cursus aliquam dolore.
+      .feature
+        %i.fa.fa-save
+        %h3 Amet imperdiet
+        %p Sed tempus feugiat adipiscing nisl cursus aliquam dolore.
+      .feature
+        %i.fa.fa-envelope-o
+        %h3 Tempus lorem
+        %p Sed tempus feugiat adipiscing nisl cursus aliquam dolore.
+/ Two
+%section#two.wrapper.style2.special
+  .inner.narrow
+    %header
+      %h2 Get in touch
+    %form.grid-form{:action => "#", :method => "post"}
+      .form-control.narrow
+        %label{:for => "name"} Name
+        %input#name{:name => "name", :type => "text"}
+      .form-control.narrow
+        %label{:for => "email"} Email
+        %input#email{:name => "email", :type => "email"}
+      .form-control
+        %label{:for => "message"} Message
+        %textarea#message{:name => "message", :rows => "4"}
+      %ul.actions
+        %li
+          %input{:type => "submit", :value => "Send Message"}/
+
+%footer#footer
+  .copyright
+    \&copy; Untitled. Design:
+    
+      
+/ Scripts

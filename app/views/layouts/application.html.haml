@@ -1,0 +1,37 @@
+!!!
+%html
+  %head
+    %title UserTask
+    /[if lte IE 8]
+      <haml:loud> javascript_include_tag 'ie/html5shiv' </haml:loud>
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    /[if lte IE 9]
+      <haml:loud> stylesheet_link_tag    'ie9', media: 'all', 'data-turbolinks-track' =&amp;gt; true </haml:loud>
+  %body
+    / %section.header
+    /   .row
+    /     .col-xs-6.left
+    /       =link_to 'UserTask',root_path,class: 'logo text-left'
+    /     .col-xs-6
+    /       =link_to '','javascript:void(0)',class: 'logo text-left'
+    / Header
+    %header#header.alt
+      %h1
+        =link_to 'UserTask',root_path
+      =link_to "Menu",'#nav'
+    / Nav
+    %nav#nav
+      %ul.links
+        %li
+          =link_to 'Home',root_path
+        %li
+          =link_to 'UserTask Mapping',root_path
+        %li
+          =link_to 'Sign Up',new_user_registration_path
+        %li
+          =link_to 'Login',new_user_session_path
+        
+    = yield
+    %section.header
+    = javascript_include_tag 'application'

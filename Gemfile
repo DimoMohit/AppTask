@@ -8,6 +8,7 @@ gem 'pg'
 gem 'rails_12factor', group: :production
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0.3'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -19,7 +20,8 @@ gem 'rails_admin'
 # gem 'rails_admin_example_theme', :git => 'git://github.com/bbenezech/rails_admin_example_theme.git'
 gem 'devise'
 gem 'cancancan'
-gem 'paper_trail'
+gem 'paper_trail','~> 3.0'
+# gem "font-awesome-rails"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

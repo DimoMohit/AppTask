@@ -12,5 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+// require bootstrap-sprockets
 //= require turbolinks
-//= require_tree .
+//= require skel.min
+//= require util
+//= require main
+// require_tree .
