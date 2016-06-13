@@ -224,10 +224,6 @@
         font-size: 1.25em;
       }
 
-      #nav .close:hover {
-        color: #fff;
-      }
-
       @media screen and (max-width: 736px) {
 
         #nav .close {
