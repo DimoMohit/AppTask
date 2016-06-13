@@ -8,6 +8,7 @@ class BlogsController < ApplicationController
     else
       @blogs=Blog.where(publish: true).last(10)
     end
+    @meta = 'Web development Blog | Blog'
   end
   def show
     @blog=Blog.find_by_url(params[:id])||Blog.find(params[:id])
