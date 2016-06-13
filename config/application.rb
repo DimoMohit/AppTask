@@ -8,6 +8,12 @@ Bundler.require(*Rails.groups)
 
 module UserTask
   class Application < Rails::Application
+    config.middleware.use Rack::Deflater
+    config.autoload_paths << "#{config.root}/lib"
+    config.action_view.sanitized_allowed_tags = ['h1','h2','h3','h4','h5','h6',
+        'strong', 'em', 'a','p','i','img','b',
+        's','u','sub','sup','br']
+    config.action_view.sanitized_allowed_attributes = ['href', 'title']
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
