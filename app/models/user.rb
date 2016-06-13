@@ -3,5 +3,8 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  has_paper_trail      
+  validates :email,presence: true
+  has_paper_trail  
+  has_many :user_task_maps
+  has_many :tasks,through: :user_task_maps  
 end

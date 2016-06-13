@@ -2,12 +2,15 @@
 %html
   %head
     %title UserTask
+    %meta{:charset => "utf-8"}
+    %meta{"http-equiv"=>"X-UA-Compatible" ,:content=>"IE=edge"}
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
     /[if lte IE 8]
-      <haml:loud> javascript_include_tag 'ie/html5shiv' </haml:loud>
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+      =javascript_include_tag 'ie/html5shiv',cache: true
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true,cache: true
     = csrf_meta_tags
     /[if lte IE 9]
-      <haml:loud> stylesheet_link_tag    'ie9', media: 'all', 'data-turbolinks-track' =&amp;gt; true </haml:loud>
+      =stylesheet_link_tag    'ie9', media: 'all', 'data-turbolinks-track' => true,cache: true
   %body
     
     / Header
@@ -23,7 +26,7 @@
         -if current_user && current_user.is_admin
           %li
             =link_to 'Observer',rails_admin.dashboard_path
-        -elsif current_user
+        -if current_user
           %li
             =link_to 'UserTask Mapping',root_path
         -else
@@ -34,4 +37,4 @@
         
     = yield
     %section.header
-    = javascript_include_tag 'application'
+    = javascript_include_tag 'application',cache: true
