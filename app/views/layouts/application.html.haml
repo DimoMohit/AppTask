@@ -28,12 +28,13 @@
         -if current_user && current_user.is_admin
           %li
             =link_to 'Observer',rails_admin.dashboard_path
-        %li
-          =link_to 'UserTask Mapping',root_path
-        %li
-          =link_to 'Sign Up',new_user_registration_path
-        %li
-          =link_to 'Login',new_user_session_path
+          %li
+            =link_to 'UserTask Mapping',root_path
+        -else
+          %li
+            =link_to 'Sign Up',new_user_registration_path
+          %li
+            =link_to 'Login',new_user_session_path
         
     = yield
     %section.header
