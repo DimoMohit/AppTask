@@ -23,8 +23,8 @@ class Task < ActiveRecord::Base
   # These users are weighted in increasing order
   def best_person_for_the_task
     best_fit=Task.candidate_set - users
-    if best_fit.count==0
-      best_fit = (User.all - users.pluck(:id)).count.zero? ? (User.all.order(last_sign_in_at: :desc)) : (User.all.order(last_sign_in_at: :desc) - users.pluck(:id))
+    if best_fit.count==0 && users.pluck(:id).count.zero?
+      best_fit = User.all.order(last_sign_in_at: :desc)
     end
     best_fit.first
   end

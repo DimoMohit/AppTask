@@ -44,3 +44,4 @@
           %h3 #{user.name}
           %p #{user.email}
           %p Has Worked on #{user.user_task_maps.count} Tasks
+          =link_to 'Assign',assign_user_task_path(@task,user: user.id),class: 'button special'

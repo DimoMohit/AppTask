@@ -29,7 +29,7 @@ class TasksController < ApplicationController
       flash['info']="Task has been successfully assigned to user #{params[:user]}."
       redirect_to assign_task_path(@task)
     else
-      flash['danger']="Task was not assigned to user #{params[:user]} because #{@task.errors.full_messages.uniq.join(' & ')}"
+      flash['danger']="Task was not assigned to user #{params[:user]} because #{user_task_map.errors.full_messages.uniq.join(' & ')}"
       redirect_to assign_task_path(@task)
     end
   end
