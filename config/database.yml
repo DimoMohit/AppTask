@@ -30,7 +30,7 @@ test: &test
   <<: *default
   username: postgres
   password: postgres
-  database: user_task
+  database: user_task_test
 
 production:
   <<: *default

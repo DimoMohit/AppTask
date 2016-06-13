@@ -1,0 +1,29 @@
+%section#two.wrapper.style2.special
+  .inner.narrow
+    %header
+      %h2
+        Create New Task
+    = form_for(@task||Task.new, html: { method: ((@task && @task.id) ? :patch : :post) }) do |f|
+      / = devise_error_messages!
+      .form-control
+        = f.label :name
+        %br/
+        = f.text_field :name, autofocus: true
+      .form-control
+        = f.label :description
+        %br/
+        = f.text_field :description, autofocus: true
+      .form-control
+        = f.label :start_date
+        %br/
+        = f.date_field :start_date, autofocus: true
+      .form-control
+        = f.label :end_date
+        %br/
+        = f.date_field :end_date, autofocus: true
+      .form-control
+        = f.label :priority
+        %br/
+        = f.number_field :priority,min: 0,max: 5, autofocus: true
+      .actions
+        = f.submit "Create"

@@ -26,15 +26,21 @@
         -if current_user && current_user.is_admin
           %li
             =link_to 'Observer',rails_admin.dashboard_path
+          %li
+            =link_to 'Create Task',new_task_path
         -if current_user
           %li
-            =link_to 'UserTask Mapping',root_path
+            =link_to 'Tasks',tasks_path
         -else
           %li
             =link_to 'Sign Up',new_user_registration_path
           %li
             =link_to 'Login',new_user_session_path
-        
+    - flash.each do |name, msg|
+      -flash_name = (name!='error' ? name : 'danger')
+      = content_tag :div, msg, :id => "flash_#{flash_name}",class: "alert alert-dismissible alert-#{flash_name} m-t-50"
+      .clear_both
+    .clear_both 
     = yield
     %section.header
     - if Rails.env == 'development'

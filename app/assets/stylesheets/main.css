@@ -2288,8 +2288,8 @@
   }
 
   input[type="text"],
-  input[type="password"],
-  input[type="email"],
+  input[type="password"],input[type="date"],
+  input[type="email"],input[type="number"],
   select,
   textarea {
     -moz-appearance: none;
@@ -2348,8 +2348,8 @@
     }
 
   input[type="text"],
-  input[type="password"],
-  input[type="email"],
+  input[type="password"],input[type="date"],
+  input[type="email"],input[type="number"],
   select {
     height: 2.75em;
   }
@@ -3357,8 +3357,8 @@
       }
 
       .wrapper.style2 input[type="text"],
-      .wrapper.style2 input[type="password"],
-      .wrapper.style2 input[type="email"],
+      .wrapper.style2 input[type="password"],.wrapper.style2 input[type="date"],
+      .wrapper.style2 input[type="email"],.wrapper.style2 input[type="number"],
       .wrapper.style2 select,
       .wrapper.style2 textarea {
         background: #fff;
@@ -4097,4 +4097,12 @@ a.logo,.logo{
   text-decoration: none;
   font-weight: 800;
   font-size: x-large;
+}
+.m-t-50{
+  margin-top: 80px;
+}
+.center,.container.center{
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
 }

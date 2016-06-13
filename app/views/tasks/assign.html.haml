@@ -1,0 +1,46 @@
+%section#two.wrapper.style2.special
+  .inner.narrow
+    %header
+      %h2
+        =@task.name
+    .row
+      .col-xs-5.col-sm-4
+        Description
+      .col-xs-7.col-sm-8
+        #{@task.description}
+    .row
+      .col-xs-5.col-sm-4
+        Priority
+      .col-xs-7.col-sm-8
+        #{@task.priority}
+    .row
+      .col-xs-5.col-sm-4
+        Start Date
+      .col-xs-7.col-sm-8
+        #{@task.start_date}
+    .row
+      .col-xs-5.col-sm-4
+        End Date
+      .col-xs-7.col-sm-8
+        #{@task.end_date}
+    %header.m-t-50
+      %h2
+        Suggested Person
+  .container.center
+    .feature.center
+      %i.fa.fa-user
+      %h3 #{@best_fit.name}
+      %p #{@best_fit.email}
+      %p Has Worked on #{@best_fit.user_task_maps.count} Tasks
+      =link_to 'Save',assign_user_task_path(@task,user: @best_fit.id),class: 'button special'
+    %header.m-t-50
+      %h2
+        Other Nearest Alternatives
+  .container.center
+    .features
+      -(@alternate_fit - [@best_fit]).each do |user|
+        .feature
+          %i.fa.fa-user
+          %h3 #{user.name}
+          %p #{user.email}
+          %p Has Worked on #{user.user_task_maps.count} Tasks

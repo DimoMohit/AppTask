@@ -1,0 +1,12 @@
+%section.wrapper.special.style2
+  .inner
+    %header.major
+      %h2 Task List
+    .features
+      -@tasks.each do |task|
+        .feature
+          =link_to task_path(task) do
+            %i.fa.fa-diamond
+            %h3 #{task.name}
+            %p #{task.description}
+            %p Done by #{task.users.count} Users

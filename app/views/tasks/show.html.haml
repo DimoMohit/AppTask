@@ -1,0 +1,40 @@
+%section#two.wrapper.style2.special
+  .inner.narrow
+    %header
+      %h2
+        =@task.name
+    .row
+      .col-xs-5.col-sm-4
+        Description
+      .col-xs-7.col-sm-8
+        #{@task.description}
+    .row
+      .col-xs-5.col-sm-4
+        Priority
+      .col-xs-7.col-sm-8
+        #{@task.priority}
+    .row
+      .col-xs-5.col-sm-4
+        Start Date
+      .col-xs-7.col-sm-8
+        #{@task.start_date}
+    .row
+      .col-xs-5.col-sm-4
+        End Date
+      .col-xs-7.col-sm-8
+        #{@task.end_date}
+    -if current_user.is_admin
+      .row
+        .col-xs-12
+          =link_to 'Auto Assign Task',assign_task_path(@task),class: 'button special'
+    %header.m-t-50
+      %h2
+        Worked by
+  .container
+    .features
+      -@task.user_task_maps.each do |user_task_map|
+        .feature
+          %i.fa.fa-user
+          %h3 #{user_task_map.user.name}
+          %p #{user_task_map.user.email}
+          %p Worked on #{user_task_map.created_at.strftime('%d %M %Y')}
