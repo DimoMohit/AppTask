@@ -37,4 +37,7 @@
         
     = yield
     %section.header
-    = javascript_include_tag 'application',cache: true
+    - if Rails.env == 'development'
+      = javascript_include_tag 'application',cache: true
+    -else
+      = javascript_include_tag 'application',cache: true,async: true
