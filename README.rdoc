@@ -2,26 +2,51 @@
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
-
-Things you may want to cover:
+* App URL
+http://user-task.herokuapp.com
 
 * Ruby version
+2.0+
+
+* Rails Version 
+4.2
+
+* Bundle install
+bundle install # Suggestion use bundle update for latest gems
 
 * System dependencies
+Linux
 
 * Configuration
+To host on heroku you can refer
+https://devcenter.heroku.com/articles/getting-started-with-rails4
 
 * Database creation
+rake db:setup
 
 * Database initialization
+rake db:migrate
+You can do for all environments
 
 * How to run the test suite
+rake test
 
 * Services (job queues, cache servers, search engines, etc.)
+memcache
 
 * Deployment instructions
+git push heroku master # To push code to heroku
+rails s -p 5000 # This can also start server
+heroku local # This will also start the server
 
-* ...
+*Logic
+User can create tasks # User Model
+Tasks can be assigned to users # Model UserTaskMap and Task
+n users can work on m tasks # Refer class Task # Modal Task
+
+*For rails admin you can click on /observer
+http://user-task.herokuapp.com/observer # You need to login as user
+http://localhost:5000/observer  
 
 
 Please feel free to use a different markup language if you do not plan to run
